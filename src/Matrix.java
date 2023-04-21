@@ -10,7 +10,7 @@ public class Matrix {
         printMatrix(matr);
 
         System.out.println();
-        System.out.println(Arrays.toString(CountRepriz(matr)));
+        System.out.println(Arrays.toString(countRepriz(matr)));
         System.out.println();
         SortSpirMatrix(matr);
         System.out.println();
@@ -31,7 +31,7 @@ public class Matrix {
             System.out.println();
         }
     }
-    public static int[] CountRepriz(int[][] matrix) {
+    public static int[] countRepriz(int[][] matrix) {
         int[] res = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
             if (matrix[i] == matrix[i++]) {
