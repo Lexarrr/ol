@@ -66,25 +66,25 @@ public class Matrix {
                             count++;
                         }
 
-                        minRow = minRow + count;
+                        minRow += count;
                         //вниз по правой стороне
                         for (int k = minRow; k <= maxRow; k++) {
                             matrix[k][maxCol] = count;
                             count++;
                         }
-                        maxCol = maxCol - count;
+                        maxCol -= count;
                         //вправо по низу
                         for (int k = maxCol; k >= minCol; k--) {
                             matrix[maxRow][k] = count;
                             count++;
                         }
-                        maxRow = maxRow - count;
+                        maxRow -= count;
                         //вверх  по левой стороне
                         for (int k = maxRow; k >= minRow; k--) {
                             matrix[k][minCol] = count;
                             count++;
                         }
-                        minCol = minCol + count;
+                        minCol += count;
                         Arrays.sort(matrix);
 
                     }
