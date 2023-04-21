@@ -18,14 +18,14 @@ public class Matrix {
     public static void fillRanMatr(int[][] matrix) {
         Random ran = new Random();
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
+            for (int j = 0; j < matrix[i].length; j++) {
                 matrix[i][j] = ran.nextInt(99);
             }
         }
     }
     public static void printMatrix(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
+            for (int j = 0; j < matrix[i].length; j++) {
                 System.out.printf("%3s", matrix[i][j]);
             }
             System.out.println();
