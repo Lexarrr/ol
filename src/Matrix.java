@@ -47,7 +47,6 @@ public class Matrix {
 
     public static void SortSpirMatrix(int[][] matrix) {
         int row = 0, col = 0;
-
         for (row = matrix[row][col]; row < matrix.length; row++) {
             for (col = matrix[row][col]; col < matrix.length; col++) {
 
