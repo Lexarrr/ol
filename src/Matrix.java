@@ -34,22 +34,28 @@ public class Matrix {
     public static int[] countRepriz(int[][] matrix) {
         int[] res = new int[matrix.length];
         for (int i = 0; i < matrix.length; i++) {
-            if (matrix[i] == matrix[i++]) {
-                res[i]++;
+            for (int j = 0; j < matrix[i].length; j++) {
+                for (int k = j+1; k < matrix[i].length; k++) {
+                    if (matrix[i][j] == matrix[i][k]) {
+                        res[i]++;
+                    }
+                }
             }
         }
         return res;
     }
+
     public static void SortSpirMatrix(int[][] matrix) {
         int row = 0, col = 0;
 
         for (row = matrix[row][col]; row < matrix.length; row++) {
             for (col = matrix[row][col]; col < matrix.length; col++) {
-                if (matrix[row][col] < matrix[row++][col++]) {
+
                     int minRow = row;
                     int maxRow = row - 1;
                     int minCol = col;
                     int maxCol = col - 1;
+                if (matrix[row][col] < matrix[row++][col++]) {
                     int count = matrix[row][col];
                     int max = row * col;
 
@@ -58,33 +64,38 @@ public class Matrix {
                         for (int k = minCol; k <= maxCol; k++) {
                             matrix[minRow][k] = count;
                             count++;
-
                         }
-                        minRow = minRow + 1;
+
+                        minRow = minRow + count;
                         //вниз по правой стороне
                         for (int k = minRow; k <= maxRow; k++) {
                             matrix[k][maxCol] = count;
                             count++;
                         }
-                        maxCol = maxCol - 1;
+                        maxCol = maxCol - count;
                         //вправо по низу
                         for (int k = maxCol; k >= minCol; k--) {
                             matrix[maxRow][k] = count;
                             count++;
                         }
-                        maxRow = maxRow - 1;
+                        maxRow = maxRow - count;
                         //вверх  по левой стороне
                         for (int k = maxRow; k >= minRow; k--) {
                             matrix[k][minCol] = count;
                             count++;
                         }
-                        minCol = minCol + 1;
+                        minCol = minCol + count;
+                        Arrays.sort(matrix);
 
                     }
                 }
+
             }
+
         }
-            printMatrix(matrix);
+
+
+        printMatrix(matrix);
     }
 }
 
