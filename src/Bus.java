@@ -1,9 +1,5 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Bus extends Engine{
     private static final int MAX_CAP = 101;
-
     private static final int MID_CAP= 50;
     private static final int MAX_SPEED = 90;
 
@@ -27,21 +23,21 @@ public class Bus extends Engine{
     }
     public int getSpeed() {
         if (speed < MAX_SPEED && getCapacity() < MID_CAP)
-            return BoostSpeed();
+            return boostSpeed();
         if (speed > MAX_SPEED)
-            return BrakingSpeed();
+            return brakeSpeed();
         return speed;
     }
 
     public void setSpeed(int speed) {
         this.speed = speed;
     }
-    public int BoostSpeed(){
+    public int boostSpeed(){
         while (speed<MAX_SPEED && getCapacity() < MID_CAP)
          setSpeed(speed+20);
         return speed;
     }
-    public int BrakingSpeed(){
+    public int brakeSpeed(){
         setSpeed(speed-20);
         return speed;
     }
