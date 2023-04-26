@@ -1,41 +1,26 @@
-public class SportCar extends Engine{
+public class SportCar extends Engine {
     private static final int MAX_SPEED = 369;
 
     String mark;
-    int speed;
+    String color;
+    int Mileage;
 
-    @Override
-    public void Color() {
-        System.out.println("Purple");
-    }
-
-    @Override
-    public void Mileage() {
-        System.out.println(600000);
-    }
-
-    public SportCar(String mark, int speed) {
+    public SportCar(String mark, int speed, String color, int mileage) {
+        super(speed);
         this.mark = mark;
-        this.speed = speed;
-    }
-    public int getSpeed() {
-        if (speed < MAX_SPEED)
-            return BoostSpeed();
-        if (speed > MAX_SPEED)
-            return BrakingSpeed();
-        return speed;
+        this.color = color;
+        Mileage = mileage;
     }
 
-    public void setSpeed(int speed) {
-        this.speed = speed;
+    public int getMileage() {
+        return Mileage;
     }
-    public int BoostSpeed(){
+    public void setMileage(int mileage) {
+        Mileage = mileage;
+    }
 
-        setSpeed(speed+30);
-        return speed;
-    }
-    public int BrakingSpeed(){
-        setSpeed(speed-30);
-        return speed;
+    public int increaseMileage() {
+
+        return 0;
     }
 }
