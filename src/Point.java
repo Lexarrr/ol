@@ -2,7 +2,7 @@ public class Point {
     double x, y;
 
     public String toString() {
-        return "(" + x + " ; " + y + ")";
+        return "(" + x + " ; " + y +")";
     }
     public Point(){
         System.out.println("работает конструктор: ");
