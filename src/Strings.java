@@ -17,8 +17,8 @@
 //        }
 //
 //    }
-////    String[] name = new String[in.available()];
-////String text = new String(String.valueOf(name));
+////    String[] Name = new String[in.available()];
+////String text = new String(String.valueOf(Name));
 ////    int count = 0;
 ////    for (char ch : text.toCharArray()) {
 ////        if (!Character.isWhitespace(ch)) {

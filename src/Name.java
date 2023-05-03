@@ -1,9 +1,8 @@
 import java.io.*;
-import java.util.Scanner;
 
 import static java.lang.System.in;
 
-public class name {
+public class Name {
 
     public static void main(String[] args) throws IOException {
 //        try {

@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Triangle {
 
     Point A, B, C;
@@ -18,10 +20,18 @@ public class Triangle {
     }
 
     double getArea(){
-        return (B.x - A.x)*(C.y - A.y)-(C.x-A.x)*(B.y- A.y)/2;
+        return (B.x - A.x)*(C.y - A.y)-(C.x-A.x)*(B.y- A.y)*0.5;
 
     }
-
+    public static Triangle parseTr(String s){
+        s = s.replace("{", "").replace("}", "");
+        String[] trgl = s.split(", ");
+        Point p1 = Point.parsePoint(trgl[0]);
+        Point p2 = Point.parsePoint(trgl[1]);
+        Point p3 = Point.parsePoint(trgl[2]);
+        Triangle tr = new Triangle(p1, p2, p3);
+        return tr;
+    }
 
 
 //
