@@ -1,5 +1,6 @@
 {
     "problems.showCurrentInStatus": true,
     "accessibility.hideAccessibleView": false,
-    "window.closeWhenEmpty": false
+    "window.closeWhenEmpty": false,
+    "liveServer.settings.port": 5501
 }

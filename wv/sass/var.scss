@@ -1,0 +1,15 @@
+@import "reset";
+
+@mixin transform($property){
+    display: $property;
+
+
+}
+
+.block{
+    @include transform(block);
+}
+
+%inherit {
+    
+}

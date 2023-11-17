@@ -1,0 +1,14 @@
+body{
+    background-color: hotpink;
+
+}
+
+.pic{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    max-height: max-content;
+    min-height: min-content;
+    
+
+}

@@ -16,7 +16,6 @@ public class matr {
         System.out.println();
 
     }
-
     public static void fillRanMatr(int[][] matrix) {
         Random ran = new Random();
         for (int i = 0; i < matrix.length; i++) {
@@ -25,7 +24,6 @@ public class matr {
             }
         }
     }
-
     public static void printMatrix(int[][] matrix) {
         for (int[] ints : matrix) {
             for (int anInt : ints) {
@@ -34,7 +32,6 @@ public class matr {
             System.out.println();
         }
     }
-
     public static int[] countRepriz(int[][] matrix) {
         int[] res = new int[matrix.length];
         Set<Integer> set = new HashSet<>();
@@ -52,7 +49,6 @@ public class matr {
         }
         return res;
     }
-
 //    public static ArrayList<Integer> toAList (int[][] array) {
 //        ArrayList<Integer> arr = new ArrayList<>();
 //            for (int[] i : array) {
@@ -63,21 +59,17 @@ public class matr {
 //
 //        return arr;
 //    }
-
     public static int[] toGetMass(int[][] mat) {
         int[] matInMas = new int[mat.length * mat[0].length];
         for (int i = 0, k = 0; i < mat.length; i++) {
             for (int j = 0; j < mat[i].length; j++) {
                 matInMas[k] = mat[i][j];
                 k++;
-
             }
         }
         Arrays.sort(matInMas);
         return matInMas;
-
     }
-
     public static void sortSpirMatrix(int[][] matrix, int row, int col) {
         int[] arr = toGetMass(matrix);
         int c = 0;
@@ -114,12 +106,9 @@ public class matr {
                         c++;
                     }
                     minCol += 1;
-
-
                 }
             }
         }
-
         printMatrix(matrix);
     }
 }
